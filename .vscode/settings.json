@@ -1,0 +1,5 @@
+{
+    "rust-analyzer.linkedProjects": [
+        ".\\irregular_scrapper\\Cargo.toml"
+    ]
+}
