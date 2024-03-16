@@ -1,8 +1,7 @@
-use scraper::html::Select;
-use scraper::{selector, Element, ElementRef};
+use scraper::ElementRef;
 use scraper::{Html, Selector};
 
-use crate::models::irregular_verb::{self, IrregularVerb};
+use crate::models::irregular_verb::IrregularVerb;
 
 pub struct IrregularScrapper {
     page: Html,
