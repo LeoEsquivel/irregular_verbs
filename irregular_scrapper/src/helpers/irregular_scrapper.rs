@@ -38,10 +38,11 @@ impl IrregularScrapper {
         let infinitive     = td_elements.next().unwrap().inner_html();
         let simple_past    = td_elements.next().unwrap().inner_html();
         let past_participle= td_elements.next().unwrap().inner_html(); 
+        let translation    = td_elements.next().unwrap().inner_html(); 
         let eng_example    = td_elements.next().unwrap().inner_html(); 
         let esp_example    = td_elements.next().unwrap().inner_html();
 
-        let irregular_verb = IrregularVerb::new(infinitive, simple_past, past_participle, eng_example, esp_example);
+        let irregular_verb = IrregularVerb::new(infinitive, simple_past, past_participle, translation, eng_example, esp_example);
         irregular_verb
     }
 
