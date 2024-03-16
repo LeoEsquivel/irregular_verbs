@@ -1,6 +1,8 @@
 mod models;
 mod helpers;
 
+use helpers::irregular_data::create_json;
+
 use crate::helpers::irregular_scrapper::IrregularScrapper;
 
 fn main() {
@@ -8,5 +10,5 @@ fn main() {
     let mut irregular_scrapper = IrregularScrapper::new(url.to_string());
 
     let verbs_list = irregular_scrapper.get_verbs_list();
-    // println!("{:?}", irregular_scrapper.get_page())
+    create_json(verbs_list);
 }

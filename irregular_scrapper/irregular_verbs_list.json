@@ -1,0 +1,938 @@
+[
+    {
+        "infinitive": "To awake",
+        "simple_past": "Awoke",
+        "past_participle": "Awoken",
+        "translation": "Despertar",
+        "eng_example": "I was awoken in the middle of the night by a loud bang.",
+        "esp_example": "Me despertó un gran estruendo en mitad de la noche."
+    },
+    {
+        "infinitive": "To be",
+        "simple_past": "Was/were",
+        "past_participle": "Been",
+        "translation": "Ser",
+        "eng_example": "I think I might have already been asleep by the time you called me.",
+        "esp_example": "Creo que ya me había dormido cuando me llamaste."
+    },
+    {
+        "infinitive": "To bear",
+        "simple_past": "Bore",
+        "past_participle": "Born",
+        "translation": "Soportar",
+        "eng_example": "Even though he wasn’t responsible for the accident, he alone bore the consequences.",
+        "esp_example": "Aunque no fue responsable del accidente, fue el único que cargó con las consecuencias."
+    },
+    {
+        "infinitive": "To beat",
+        "simple_past": "Beat",
+        "past_participle": "Beaten",
+        "translation": "Latir",
+        "eng_example": "You beat me to the punch! I was about to say that.",
+        "esp_example": "¡Te me adelantaste! Estaba a punto de decirlo."
+    },
+    {
+        "infinitive": "To become",
+        "simple_past": "Became",
+        "past_participle": "Become",
+        "translation": "Llegar a ser",
+        "eng_example": "She became the top swimmer in her high school.",
+        "esp_example": "Llegó a ser la mejor nadadora de su escuela."
+    },
+    {
+        "infinitive": "To begin",
+        "simple_past": "Began",
+        "past_participle": "Begun",
+        "translation": "Comenzar",
+        "eng_example": "I rushed as much as I could, but the competition had already begun by the time I got there.",
+        "esp_example": "Me apresuré todo lo que pude, pero cuando llegué ya había empezado la competición."
+    },
+    {
+        "infinitive": "To bend",
+        "simple_past": "Bent",
+        "past_participle": "Bent",
+        "translation": "Doblar",
+        "eng_example": "I can’t use this part anymore because it’s bent.",
+        "esp_example": "Ya no puedo usar esta parte porque está doblada."
+    },
+    {
+        "infinitive": "To bid",
+        "simple_past": "Bid",
+        "past_participle": "Bid",
+        "translation": "Pedir",
+        "eng_example": "She bid him farewell on a cold, rainy night.",
+        "esp_example": "Se despidió de él en una noche fría y lluviosa."
+    },
+    {
+        "infinitive": "To bite",
+        "simple_past": "Bit",
+        "past_participle": "Bitten",
+        "translation": "Morder",
+        "eng_example": "Luckily, I’ve never been bitten by a snake.",
+        "esp_example": "Por suerte, nunca me ha mordido una serpiente."
+    },
+    {
+        "infinitive": "To bleed",
+        "simple_past": "Bled",
+        "past_participle": "Bled",
+        "translation": "Sangrar",
+        "eng_example": "I got a nosebleed last night and bled all over my pillowcase.",
+        "esp_example": "Anoche me sangró la nariz y manché de sangre toda la funda de la almohada."
+    },
+    {
+        "infinitive": "To blow",
+        "simple_past": "Blew",
+        "past_participle": "Blown",
+        "translation": "Soplar",
+        "eng_example": "I think he blew it out of proportion — it really wasn’t that big of a deal.",
+        "esp_example": "Creo que exageró, en realidad no fue para tanto."
+    },
+    {
+        "infinitive": "To break",
+        "simple_past": "Broke",
+        "past_participle": "Broken",
+        "translation": "Romper",
+        "eng_example": "The handle broke as soon as I touched it.",
+        "esp_example": "El mango se rompió en cuanto lo toqué."
+    },
+    {
+        "infinitive": "To bring",
+        "simple_past": "Brought",
+        "past_participle": "Brought",
+        "translation": "Traer",
+        "eng_example": "She brought the same cookies she had brought last year!",
+        "esp_example": "¡Trajo las mismas galletas que había traído el año pasado!"
+    },
+    {
+        "infinitive": "To broadcast",
+        "simple_past": "Broadcast",
+        "past_participle": "Broadcast",
+        "translation": "Difundir",
+        "eng_example": "The news report was broadcast this morning.",
+        "esp_example": "El reportaje se emitió esta mañana."
+    },
+    {
+        "infinitive": "To build",
+        "simple_past": "Built",
+        "past_participle": "Built",
+        "translation": "Construir",
+        "eng_example": "This house was built in the 19th century.",
+        "esp_example": "Esta casa fue construida en el siglo XIX."
+    },
+    {
+        "infinitive": "To burn",
+        "simple_past": "Burned or burnt",
+        "past_participle": "Burn or burnt",
+        "translation": "Quemar",
+        "eng_example": "I made some mac &amp; cheese, but I left it in the oven too long and burnt it to a crisp!",
+        "esp_example": "Hice macarrones con queso, pero los dejé demasiado tiempo en el horno y se quemaron."
+    },
+    {
+        "infinitive": "To bust",
+        "simple_past": "Bust",
+        "past_participle": "Bust",
+        "translation": "Reventar",
+        "eng_example": "The original dam bust from all the pressure in 1987, so they had to build a new one.",
+        "esp_example": "La presa original reventó de tanta presión en 1987, así que tuvieron que construir una nueva."
+    },
+    {
+        "infinitive": "To buy",
+        "simple_past": "Bought",
+        "past_participle": "Bought",
+        "translation": "Comprar",
+        "eng_example": "She bought him a new car for his birthday.",
+        "esp_example": "Le compró un coche nuevo por su cumpleaños."
+    },
+    {
+        "infinitive": "To catch",
+        "simple_past": "Caught",
+        "past_participle": "Caught",
+        "translation": "Coger",
+        "eng_example": "We caught our kid using his phone past his bedtime, so we had to take it away.",
+        "esp_example": "Descubrimos a nuestro hijo usando el teléfono después de su hora de acostarse, así que tuvimos que quitárselo."
+    },
+    {
+        "infinitive": "To choose",
+        "simple_past": "Chose",
+        "past_participle": "Chosen",
+        "translation": "Elegir",
+        "eng_example": "The dress I had chosen is no longer in stock.",
+        "esp_example": "El vestido que había elegido ya no está en existencia."
+    },
+    {
+        "infinitive": "To cling",
+        "simple_past": "Clung",
+        "past_participle": "Clung",
+        "translation": "Aferrarse",
+        "eng_example": "The cat clung on to the roof for dear life.",
+        "esp_example": "El gato se aferró al techo para salvar su vida."
+    },
+    {
+        "infinitive": "To come",
+        "simple_past": "Came",
+        "past_participle": "Come",
+        "translation": "Venir",
+        "eng_example": "I’m shocked, this news really came out of the blue.",
+        "esp_example": "Estoy sorprendido, esta noticia realmente salió de la nada."
+    },
+    {
+        "infinitive": "To cost",
+        "simple_past": "Cost",
+        "past_participle": "Cost",
+        "translation": "Costar",
+        "eng_example": "Even though she bought this art piece as an investment, she had to sell it for less than what it had originally cost her.",
+        "esp_example": "Aunque compró esta obra de arte como inversión, tuvo que venderla por menos de lo que le había costado originalmente."
+    },
+    {
+        "infinitive": "To creep",
+        "simple_past": "Crept",
+        "past_participle": "Crept",
+        "translation": "Arrastrarse",
+        "eng_example": "The intruder crept into our house without making any noise.",
+        "esp_example": "El intruso se coló en nuestra casa sin hacer ruido."
+    },
+    {
+        "infinitive": "To cut",
+        "simple_past": "Cut",
+        "past_participle": "Cut",
+        "translation": "Cortar",
+        "eng_example": "Due to budget constraints, the school cut its arts program last year.",
+        "esp_example": "Debido a restricciones presupuestarias, el colegio recortó su programa de arte el año pasado."
+    },
+    {
+        "infinitive": "To dig",
+        "simple_past": "Dug",
+        "past_participle": "Dug",
+        "translation": "Cavar",
+        "eng_example": "The dog randomly dug out a bone from the ground.",
+        "esp_example": "El perro sacó un hueso del suelo al azar."
+    },
+    {
+        "infinitive": "To do",
+        "simple_past": "Did",
+        "past_participle": "Done",
+        "translation": "Hacer",
+        "eng_example": "It was too late by the time he realized what he had done.",
+        "esp_example": "Cuando se dio cuenta de lo que había hecho, ya era demasiado tarde."
+    },
+    {
+        "infinitive": "To draw",
+        "simple_past": "Drew",
+        "past_participle": "Drawn",
+        "translation": "Dibujar",
+        "eng_example": "He was quite impressed with the results, considering he had never drawn anything like that before.",
+        "esp_example": "Estaba bastante impresionado con los resultados, teniendo en cuenta que nunca antes había dibujado nada parecido."
+    },
+    {
+        "infinitive": "To dream",
+        "simple_past": "Dreamed or dreamt",
+        "past_participle": "Dreamed or dreamt",
+        "translation": "Soñar",
+        "eng_example": "They finally moved into the home they had always dreamt of.",
+        "esp_example": "Por fin se mudaron a la casa con la que siempre habían soñado."
+    },
+    {
+        "infinitive": "To drive",
+        "simple_past": "Drove",
+        "past_participle": "Driven",
+        "translation": "Conducir",
+        "eng_example": "I had never driven on a coastline like this before.",
+        "esp_example": "Nunca había conducido por una costa como ésta."
+    },
+    {
+        "infinitive": "To drink",
+        "simple_past": "Drank",
+        "past_participle": "Drunk",
+        "translation": "Beber",
+        "eng_example": "I had already drunk too much wine by the time we started having dinner.",
+        "esp_example": "Ya había bebido demasiado vino cuando empezamos a cenar."
+    },
+    {
+        "infinitive": "To eat",
+        "simple_past": "Ate",
+        "past_participle": "Eaten",
+        "translation": "Comer",
+        "eng_example": "I was so hungry I could have eaten a whole cow!",
+        "esp_example": "Tenía tanta hambre que podría haberme comido una vaca entera."
+    },
+    {
+        "infinitive": "To fall",
+        "simple_past": "Fell",
+        "past_participle": "Fallen",
+        "translation": "Caerse",
+        "eng_example": "Nathan wasn’t careful so he fell into the river.",
+        "esp_example": "Nathan no tuvo cuidado y se cayó al río."
+    },
+    {
+        "infinitive": "To feed",
+        "simple_past": "Fed",
+        "past_participle": "Fed",
+        "translation": "Alimentarse",
+        "eng_example": "Even though it was a very long time, they kept me very well fed.",
+        "esp_example": "Aunque pasó mucho tiempo, me mantuvieron muy bien alimentado."
+    },
+    {
+        "infinitive": "To feel",
+        "simple_past": "Felt",
+        "past_participle": "Felt",
+        "translation": "Sentir",
+        "eng_example": "I felt like you weren’t listening to me.",
+        "esp_example": "Sentí que no me escuchaban."
+    },
+    {
+        "infinitive": "To fight",
+        "simple_past": "Fought",
+        "past_participle": "Fought",
+        "translation": "Luchar",
+        "eng_example": "I fought really hard to get to where I am today.",
+        "esp_example": "He luchado mucho para llegar a donde estoy hoy."
+    },
+    {
+        "infinitive": "To find",
+        "simple_past": "Found",
+        "past_participle": "Found",
+        "translation": "Encontrar",
+        "eng_example": "You should check with the lost and found department to see if they have your card.",
+        "esp_example": "Deberías comprobar en el departamento de objetos perdidos si tienen tu tarjeta."
+    },
+    {
+        "infinitive": "To flee",
+        "simple_past": "Fled",
+        "past_participle": "Fled",
+        "translation": "Huir",
+        "eng_example": "They fled their war-torn country when they were just children.",
+        "esp_example": "Huyeron de su país asolado por la guerra cuando solo eran unos niños."
+    },
+    {
+        "infinitive": "To fling",
+        "simple_past": "Flung",
+        "past_participle": "Flung",
+        "translation": "Tirar",
+        "eng_example": "He just grabbed my notebook and flung it out the window!",
+        "esp_example": "Cogió mi cuaderno y lo tiró por la ventana."
+    },
+    {
+        "infinitive": "To fly",
+        "simple_past": "Flew",
+        "past_participle": "Flown",
+        "translation": "Volar",
+        "eng_example": "The bird flew away before the cat could catch it.",
+        "esp_example": "El pájaro salió volando antes de que el gato pudiera atraparlo."
+    },
+    {
+        "infinitive": "To forbid",
+        "simple_past": "Forbade",
+        "past_participle": "Forbidden",
+        "translation": "Prohibir",
+        "eng_example": "Taking photos inside the museum is strictly forbidden.",
+        "esp_example": "Está estrictamente prohibido hacer fotos dentro del museo."
+    },
+    {
+        "infinitive": "To forget",
+        "simple_past": "Forgot",
+        "past_participle": "Forgotten",
+        "translation": "Olvidar",
+        "eng_example": "I had forgotten about the homework assignment, but luckily, I remembered right before the deadline.",
+        "esp_example": "Me había olvidado de los deberes, pero por suerte me acordé justo antes de la fecha límite."
+    },
+    {
+        "infinitive": "To forgive",
+        "simple_past": "Forgave",
+        "past_participle": "Forgiven",
+        "translation": "Perdonar",
+        "eng_example": "No need to apologize, you’re already forgiven!",
+        "esp_example": "No hace falta que te disculpes, ya estás perdonado."
+    },
+    {
+        "infinitive": "To freeze",
+        "simple_past": "Froze",
+        "past_participle": "Frozen",
+        "translation": "Congelar",
+        "eng_example": "He froze when he heard her voice.",
+        "esp_example": "Se quedó helado al oír su voz."
+    },
+    {
+        "infinitive": "To get",
+        "simple_past": "Got",
+        "past_participle": "Got",
+        "translation": "Conseguir",
+        "eng_example": "I got a new pair of jeans yesterday.",
+        "esp_example": "Ayer me compré unos vaqueros nuevos."
+    },
+    {
+        "infinitive": "To give",
+        "simple_past": "Gave",
+        "past_participle": "Given",
+        "translation": "Dar",
+        "eng_example": "He gave me flowers on our first date!",
+        "esp_example": "Me regaló flores en nuestra primera cita."
+    },
+    {
+        "infinitive": "To grind",
+        "simple_past": "Ground",
+        "past_participle": "Ground",
+        "translation": "Moler",
+        "eng_example": "Do you want to buy ground coffee or whole beans?",
+        "esp_example": "¿Quieres comprar café molido o en grano?"
+    },
+    {
+        "infinitive": "To go",
+        "simple_past": "Went",
+        "past_participle": "Gone",
+        "translation": "Para ir",
+        "eng_example": "Oh, she’s already gone! She left this morning.",
+        "esp_example": "¡Oh, ya se ha ido! Se fue esta mañana."
+    },
+    {
+        "infinitive": "To grow",
+        "simple_past": "Grew",
+        "past_participle": "Grown",
+        "translation": "Crecer",
+        "eng_example": "I didn’t like the carpet at first, but it grew on me.",
+        "esp_example": "Al principio no me gustaba la alfombra, pero luego me gustó."
+    },
+    {
+        "infinitive": "To hang",
+        "simple_past": "Hung",
+        "past_participle": "Hung",
+        "translation": "Colgar",
+        "eng_example": "He hung his laundry in the balcony and it flew off!",
+        "esp_example": "¡Colgó su ropa en el balcón y salió volando!"
+    },
+    {
+        "infinitive": "To have",
+        "simple_past": "Had",
+        "past_participle": "Had",
+        "translation": "Tener",
+        "eng_example": "I think he already had lunch, so we can start eating without him",
+        "esp_example": "Creo que ya almorzó, así que podemos empezar a comer sin él."
+    },
+    {
+        "infinitive": "To hear",
+        "simple_past": "Heard",
+        "past_participle": "Heard",
+        "translation": "Escuchar",
+        "eng_example": "Hey! I heard you’re coming to visit next month?",
+        "esp_example": "¡Eh! He oído que vienes de visita el mes que viene..."
+    },
+    {
+        "infinitive": "To hide",
+        "simple_past": "Hid",
+        "past_participle": "Hidden",
+        "translation": "Esconderse",
+        "eng_example": "They found a hidden treasure at the beach and became rich!",
+        "esp_example": "Encontraron un tesoro escondido en la playa y se hicieron ricos."
+    },
+    {
+        "infinitive": "To hit",
+        "simple_past": "Hit",
+        "past_participle": "Hit",
+        "translation": "Golpear",
+        "eng_example": "He got injured while skiing because he hit a tree.",
+        "esp_example": "Se lesionó esquiando porque chocó contra un árbol."
+    },
+    {
+        "infinitive": "To hold",
+        "simple_past": "Held",
+        "past_participle": "Held",
+        "translation": "Sujetar",
+        "eng_example": "My cat loves being held like a little baby.",
+        "esp_example": "A mi gato le encanta que le cojan en brazos como a un bebé."
+    },
+    {
+        "infinitive": "To hurt",
+        "simple_past": "Hurt",
+        "past_participle": "Hurt",
+        "translation": "Herir",
+        "eng_example": "Your words really hurt me, so it will take some time for me to move on.",
+        "esp_example": "Tus palabras me hirieron mucho, así que tardaré algún tiempo en superarlo."
+    },
+    {
+        "infinitive": "To keep",
+        "simple_past": "Kept",
+        "past_participle": "Kept",
+        "translation": "Guardar",
+        "eng_example": "I kept your letter after all these years.",
+        "esp_example": "He guardado tu carta después de tantos años."
+    },
+    {
+        "infinitive": "To know",
+        "simple_past": "Knew",
+        "past_participle": "Known",
+        "translation": "Saber",
+        "eng_example": "I wish I had known before I came all the way here!",
+        "esp_example": "¡Ojalá lo hubiera sabido antes de venir hasta aquí!"
+    },
+    {
+        "infinitive": "To lay",
+        "simple_past": "Laid",
+        "past_participle": "Laid",
+        "translation": "Poner",
+        "eng_example": "They laid a strong foundation before beginning construction on the megaproject.",
+        "esp_example": "Sentaron unas bases sólidas antes de empezar la construcción del megaproyecto."
+    },
+    {
+        "infinitive": "To lead",
+        "simple_past": "Led",
+        "past_participle": "Led",
+        "translation": "Guiar",
+        "eng_example": "Poor management led to the bankruptcy of what once was a thriving company.",
+        "esp_example": "La mala gestión llevó a la quiebra a lo que una vez fue una empresa próspera."
+    },
+    {
+        "infinitive": "To learn",
+        "simple_past": "Learned",
+        "past_participle": "Learned",
+        "translation": "Aprender",
+        "eng_example": "I was placed two math levels above my grade because I had already learned most of what they were studying.",
+        "esp_example": "Me colocaron dos niveles de matemáticas por encima de mi curso porque ya había aprendido la mayor parte de lo que estudiaban."
+    },
+    {
+        "infinitive": "To leave",
+        "simple_past": "Left",
+        "past_participle": "Left",
+        "translation": "Dejar",
+        "eng_example": "I rushed to the airport to meet there, but she had already left by the time I got there.",
+        "esp_example": "Corrí al aeropuerto para reunirme con ella, pero cuando llegué ya se había marchado."
+    },
+    {
+        "infinitive": "To lend",
+        "simple_past": "Lent",
+        "past_participle": "Lent",
+        "translation": "Prestar",
+        "eng_example": "Here are the books you had lent me.",
+        "esp_example": "Aquí están los libros que me había prestado."
+    },
+    {
+        "infinitive": "To let",
+        "simple_past": "Let",
+        "past_participle": "Let",
+        "translation": "Dejar",
+        "eng_example": "Our teacher let us out of class a few minutes early.",
+        "esp_example": "Nuestro profesor nos dejó salir de clase unos minutos antes."
+    },
+    {
+        "infinitive": "To lie",
+        "simple_past": "Lay",
+        "past_participle": "Lain",
+        "translation": "Mentir",
+        "eng_example": "Yesterday was a great day, I just lay by the beach and ate a bunch of fruits.",
+        "esp_example": "Ayer fue un día estupendo, me tumbé en la playa y comí un montón de fruta."
+    },
+    {
+        "infinitive": "To lose",
+        "simple_past": "Lost",
+        "past_participle": "Lost",
+        "translation": "Perder",
+        "eng_example": "I can’t believe I found the jacket I thought I had lost years ago!",
+        "esp_example": "No puedo creer que haya encontrado la chaqueta que creía haber perdido hace años."
+    },
+    {
+        "infinitive": "To make",
+        "simple_past": "Made",
+        "past_participle": "Made",
+        "translation": "Hacer",
+        "eng_example": "This dish is what made this restaurant an international phenomenon.",
+        "esp_example": "Este plato es lo que hizo de este restaurante un fenómeno internacional."
+    },
+    {
+        "infinitive": "To mean",
+        "simple_past": "Meant",
+        "past_participle": "Meant",
+        "translation": "Significar",
+        "eng_example": "I don’t know what she meant by that, but she seems upset.",
+        "esp_example": "No sé qué quiso decir con eso, pero parece disgustada."
+    },
+    {
+        "infinitive": "To meet",
+        "simple_past": "Met",
+        "past_participle": "Met",
+        "translation": "Cumplir",
+        "eng_example": "I had never met someone like you.",
+        "esp_example": "Nunca había conocido a alguien como tú."
+    },
+    {
+        "infinitive": "To pay",
+        "simple_past": "Paid",
+        "past_participle": "Paid",
+        "translation": "Pagar",
+        "eng_example": "As long as I’m being paid, I don’t mind staying after closing.",
+        "esp_example": "Mientras me paguen, no me importa quedarme después del cierre."
+    },
+    {
+        "infinitive": "To prove",
+        "simple_past": "Proved",
+        "past_participle": "Proven",
+        "translation": "Demostrar",
+        "eng_example": "We’re all innocent until proven guilty in the court of law.",
+        "esp_example": "Todos somos inocentes hasta que se demuestre lo contrario en un tribunal."
+    },
+    {
+        "infinitive": "To put",
+        "simple_past": "Put",
+        "past_participle": "Put",
+        "translation": "Poner",
+        "eng_example": "I can’t find my scarf. I know I put it somewhere, but I can’t remember where!",
+        "esp_example": "No encuentro mi bufanda. Sé que la puse en algún sitio, pero no recuerdo dónde."
+    },
+    {
+        "infinitive": "To quit",
+        "simple_past": "Quit",
+        "past_participle": "Quit",
+        "translation": "Dejar",
+        "eng_example": "He had already quit his job before I had a chance to convince him not to.",
+        "esp_example": "Ya había dejado el trabajo antes de que pudiera convencerle de que no lo hiciera."
+    },
+    {
+        "infinitive": "To read",
+        "simple_past": "Read",
+        "past_participle": "Read",
+        "translation": "Leer",
+        "eng_example": "He read her a bedtime story before putting her to bed.",
+        "esp_example": "Le leyó un cuento antes de acostarla."
+    },
+    {
+        "infinitive": "To ride",
+        "simple_past": "Rode",
+        "past_participle": "Ridden",
+        "translation": "Cabalgar",
+        "eng_example": "I’ve ridden every single rollercoaster in this theme park.",
+        "esp_example": "Me he subido a todas las montañas rusas de este parque temático."
+    },
+    {
+        "infinitive": "To ring",
+        "simple_past": "Rang",
+        "past_participle": "Rung",
+        "translation": "Tocar",
+        "eng_example": "He rang me up at the cash register upstairs.",
+        "esp_example": "Me llamó a la caja registradora de arriba."
+    },
+    {
+        "infinitive": "To rise",
+        "simple_past": "Rose",
+        "past_participle": "Risen",
+        "translation": "Levantarse",
+        "eng_example": "It’s very inspiring to see how you rose from the bottom.",
+        "esp_example": "Es muy inspirador ver cómo te has levantado desde abajo."
+    },
+    {
+        "infinitive": "To run",
+        "simple_past": "Ran",
+        "past_participle": "Run",
+        "translation": "Correr",
+        "eng_example": "You should have already run at least 20 miles in one go before you attempt to run a marathon.",
+        "esp_example": "Antes de intentar correr un maratón, deberías haber corrido por lo menos 30 kilómetros de un tirón."
+    },
+    {
+        "infinitive": "To say",
+        "simple_past": "Said",
+        "past_participle": "Said",
+        "translation": "Decir",
+        "eng_example": "I misunderstood what she had said.",
+        "esp_example": "Entendí mal lo que había dicho."
+    },
+    {
+        "infinitive": "To see",
+        "simple_past": "Saw",
+        "past_participle": "Seen",
+        "translation": "Ver",
+        "eng_example": "That was the most beautiful sunset I’ve ever seen.",
+        "esp_example": "Ha sido la puesta de sol más bonita que he visto nunca."
+    },
+    {
+        "infinitive": "To seek",
+        "simple_past": "Sought",
+        "past_participle": "Sought",
+        "translation": "Buscar",
+        "eng_example": "I sought some advice from my thesis advisor, but he was upset I even asked!",
+        "esp_example": "Pedí consejo a mi director de tesis, ¡pero le molestó que se lo pidiera!"
+    },
+    {
+        "infinitive": "To sell",
+        "simple_past": "Sold",
+        "past_participle": "Sold",
+        "translation": "Vender",
+        "eng_example": "Fortunately, the house sold in less than two weeks.",
+        "esp_example": "Afortunadamente, la casa se vendió en menos de dos semanas."
+    },
+    {
+        "infinitive": "To send",
+        "simple_past": "Sent",
+        "past_participle": "Sent",
+        "translation": "Enviar",
+        "eng_example": "I sent my bags ahead of time so they were already at the hotel when I got there.",
+        "esp_example": "Envié las maletas con antelación, así que ya estaban en el hotel cuando llegué."
+    },
+    {
+        "infinitive": "To set",
+        "simple_past": "Set",
+        "past_participle": "Set",
+        "translation": "Poner",
+        "eng_example": "I set the table earlier today so we should be ready for dinner.",
+        "esp_example": "Puse la mesa hoy temprano así que deberíamos estar listos para la cena."
+    },
+    {
+        "infinitive": "To sew",
+        "simple_past": "Sewed",
+        "past_participle": "Sewn",
+        "translation": "Coser",
+        "eng_example": "This one-of-a-kind, hand-sewn dress was passed on to me by my grandma.",
+        "esp_example": "Este vestido único, cosido a mano, me lo heredó mi abuela."
+    },
+    {
+        "infinitive": "To shake",
+        "simple_past": "Shook",
+        "past_participle": "Shaken",
+        "translation": "Sacudir",
+        "eng_example": "I’m still a little shaken from the car accident, but, thankfully, I’m okay.",
+        "esp_example": "Todavía estoy un poco conmocionada por el accidente de auto, pero, afortunadamente, estoy bien."
+    },
+    {
+        "infinitive": "To show",
+        "simple_past": "Showed",
+        "past_participle": "Shown",
+        "translation": "Mostrar",
+        "eng_example": "He had already shown her the birthday party invite, so he ruined the surprise.",
+        "esp_example": "Ya le había enseñado la invitación a la fiesta de cumpleaños, así que arruinó la sorpresa."
+    },
+    {
+        "infinitive": "To shut",
+        "simple_past": "Shut",
+        "past_participle": "Shut",
+        "translation": "Cerrar",
+        "eng_example": "I forgot to shut the window and now my room is full of mosquitoes.",
+        "esp_example": "Olvidé cerrar la ventana y ahora mi habitación está llena de mosquitos."
+    },
+    {
+        "infinitive": "To sing",
+        "simple_past": "Sang",
+        "past_participle": "Sung",
+        "translation": "Cantar",
+        "eng_example": "She sang a beautiful song at our wedding.",
+        "esp_example": "Cantó una canción preciosa en nuestra boda."
+    },
+    {
+        "infinitive": "To sink",
+        "simple_past": "Sank",
+        "past_participle": "Sunk",
+        "translation": "Hundir",
+        "eng_example": "The boat sank to the bottom of the ocean after hitting an iceberg.",
+        "esp_example": "El barco se hundió en el fondo del océano tras chocar con un iceberg."
+    },
+    {
+        "infinitive": "To sit",
+        "simple_past": "Sat",
+        "past_participle": "Sat",
+        "translation": "Sentarse",
+        "eng_example": "My mom forgot she had to pick me up from school so I just sat there and waited for her for hours.",
+        "esp_example": "Mi madre olvidó que tenía que recogerme del colegio, así que me quedé sentada esperándola durante horas."
+    },
+    {
+        "infinitive": "To sleep",
+        "simple_past": "Slept",
+        "past_participle": "Slept",
+        "translation": "Dormir",
+        "eng_example": "I hadn’t slept that well in a really long time.",
+        "esp_example": "Hacía mucho tiempo que no dormía tan bien."
+    },
+    {
+        "infinitive": "To slide",
+        "simple_past": "Slid",
+        "past_participle": "Slid",
+        "translation": "Deslizarse",
+        "eng_example": "The dog slid down the waterslide like an enthusiastic child.",
+        "esp_example": "El perro se deslizó por el tobogán como un niño entusiasmado."
+    },
+    {
+        "infinitive": "To sling",
+        "simple_past": "Slung",
+        "past_participle": "Slung",
+        "translation": "Eslingar",
+        "eng_example": "I was already on my way out but I still slung a few pieces of candy in my bag.",
+        "esp_example": "Yo ya estaba a punto de salir, pero aún llevaba unos cuantos caramelos en la bolsa."
+    },
+    {
+        "infinitive": "To sow",
+        "simple_past": "Sowed",
+        "past_participle": "Sown",
+        "translation": "Sembrar",
+        "eng_example": "The farmers sowed diligently all day long, but soon they will be able to feast on their harvest.",
+        "esp_example": "Los agricultores sembraron diligentemente durante todo el día, pero pronto podrán darse un festín con su cosecha."
+    },
+    {
+        "infinitive": "To speak",
+        "simple_past": "Spoke",
+        "past_participle": "Spoken",
+        "translation": "Hablar",
+        "eng_example": "There you have it, spoken like a true native!",
+        "esp_example": "Ahí lo tienes, ¡hablado como un auténtico nativo!"
+    },
+    {
+        "infinitive": "To spend",
+        "simple_past": "Spent",
+        "past_participle": "Spent",
+        "translation": "Gastar",
+        "eng_example": "I spent the whole afternoon studying Spanish, and I think it’s actually paying off!",
+        "esp_example": "Me he pasado toda la tarde estudiando español, ¡y creo que está dando sus frutos!"
+    },
+    {
+        "infinitive": "To spin",
+        "simple_past": "Spun",
+        "past_participle": "Spun",
+        "translation": "Girar",
+        "eng_example": "Everything was fine at first, but things just spun out of control.",
+        "esp_example": "Al principio todo iba bien, pero las cosas se descontrolaron."
+    },
+    {
+        "infinitive": "To stand",
+        "simple_past": "Stood",
+        "past_participle": "Stood",
+        "translation": "Soportar",
+        "eng_example": "Nobody dared to help after the accident, everyone just stood there in shock.",
+        "esp_example": "Nadie se atrevió a ayudar después del accidente, todo el mundo se quedó parado, conmocionado."
+    },
+    {
+        "infinitive": "To steal",
+        "simple_past": "Stole",
+        "past_participle": "Stolen",
+        "translation": "Para robar",
+        "eng_example": "They stopped construction because the government found out it was being financed with stolen money.",
+        "esp_example": "Pararon la construcción porque el gobierno descubrió que se estaba financiando con dinero robado."
+    },
+    {
+        "infinitive": "To sting",
+        "simple_past": "Stung",
+        "past_participle": "Stung",
+        "translation": "Picar",
+        "eng_example": "I’m very lucky because I’ve never been stung by a bee.",
+        "esp_example": "Tengo mucha suerte porque nunca me ha picado una abeja."
+    },
+    {
+        "infinitive": "To stink",
+        "simple_past": "Stank",
+        "past_participle": "Stunk",
+        "translation": "Apestar",
+        "eng_example": "All of our fruits went bad because the power went out while we were away, so our fridge stunk terribly when we returned.",
+        "esp_example": "Todas nuestras frutas se echaron a perder porque se fue la luz mientras estábamos fuera, así que nuestra nevera apestaba terriblemente cuando volvimos."
+    },
+    {
+        "infinitive": "To swear",
+        "simple_past": "Swore",
+        "past_participle": "Sworn",
+        "translation": "Jurar",
+        "eng_example": "I could’ve sworn I saw you at the mall the other day.",
+        "esp_example": "Juraría que te vi en el centro comercial el otro día."
+    },
+    {
+        "infinitive": "To swim",
+        "simple_past": "Swam",
+        "past_participle": "Swum",
+        "translation": "Nadar",
+        "eng_example": "I swam all the way to the island and back yesterday.",
+        "esp_example": "Ayer nadé hasta la isla y volví."
+    },
+    {
+        "infinitive": "To swing",
+        "simple_past": "Swung",
+        "past_participle": "Swung",
+        "translation": "Columpiarse",
+        "eng_example": "I swung at the ball as hard as I could, but I still didn’t hit a home run.",
+        "esp_example": "Golpeé la pelota con todas mis fuerzas, pero no conseguí un jonrón."
+    },
+    {
+        "infinitive": "To take",
+        "simple_past": "Took",
+        "past_participle": "Taken",
+        "translation": "Coger",
+        "eng_example": "I think what I said might’ve been taken out of context.",
+        "esp_example": "Creo que lo que dije se sacó de contexto."
+    },
+    {
+        "infinitive": "To teach",
+        "simple_past": "Taught",
+        "past_participle": "Taught",
+        "translation": "Enseñar",
+        "eng_example": "Having taught children for over two decades, I think I can speak to children effectively.",
+        "esp_example": "Después de haber enseñado a niños durante más de dos décadas, creo que puedo hablarles con eficacia."
+    },
+    {
+        "infinitive": "To tear",
+        "simple_past": "Tore",
+        "past_participle": "Torn",
+        "translation": "Rasgar",
+        "eng_example": "I’m torn between these two dresses, what do you think?",
+        "esp_example": "Me debato entre estos dos vestidos, ¿qué opinas?"
+    },
+    {
+        "infinitive": "To tell",
+        "simple_past": "Told",
+        "past_participle": "Told",
+        "translation": "Para contar",
+        "eng_example": "I’ve told you a million times to always lock the door when you leave!",
+        "esp_example": "Te he dicho un millón de veces que siempre cierres la puerta cuando salgas."
+    },
+    {
+        "infinitive": "To think",
+        "simple_past": "Thought",
+        "past_participle": "Thought",
+        "translation": "Pensar",
+        "eng_example": "Learning English is much easier than I thought.",
+        "esp_example": "Aprender inglés es mucho más fácil de lo que pensaba."
+    },
+    {
+        "infinitive": "To throw",
+        "simple_past": "Threw",
+        "past_participle": "Thrown",
+        "translation": "Lanzar",
+        "eng_example": "I threw my bags on the floor and ran to give him a hug as soon as I got home.",
+        "esp_example": "Tiré las maletas al suelo y corrí a darle un abrazo en cuanto llegué a casa."
+    },
+    {
+        "infinitive": "To understand",
+        "simple_past": "Understood",
+        "past_participle": "Understood",
+        "translation": "Comprender",
+        "eng_example": "I finally understood how to conjugate verbs in Spanish after taking a few more online classes.",
+        "esp_example": "Por fin entendí cómo conjugar los verbos en español después de tomar unas cuantas clases online más."
+    },
+    {
+        "infinitive": "To wake",
+        "simple_past": "Woke",
+        "past_participle": "Woken",
+        "translation": "Despertar",
+        "eng_example": "She woke me up right in time to make it to the airport to catch my flight.",
+        "esp_example": "Me despertó justo a tiempo para llegar al aeropuerto y coger mi vuelo."
+    },
+    {
+        "infinitive": "To wear",
+        "simple_past": "Wore",
+        "past_participle": "Worn",
+        "translation": "Llevar",
+        "eng_example": "He wore a sharp-looking suit with a striking red tie to the gala.",
+        "esp_example": "Llevaba un elegante traje con una llamativa corbata roja para la gala."
+    },
+    {
+        "infinitive": "To weep",
+        "simple_past": "Wept",
+        "past_participle": "Wept",
+        "translation": "Llorar",
+        "eng_example": "I was able to get over my last breakup, but only after I had wept for several days.",
+        "esp_example": "Pude superar mi última ruptura, pero sólo después de haber llorado durante varios días."
+    },
+    {
+        "infinitive": "To win",
+        "simple_past": "Won",
+        "past_participle": "Won",
+        "translation": "Ganar",
+        "eng_example": "They placed me with some novice players, so I had won the game before it even began.",
+        "esp_example": "Me colocaron con unos jugadores novatos, así que había ganado la partida antes incluso de que empezara."
+    },
+    {
+        "infinitive": "To write",
+        "simple_past": "Wrote",
+        "past_participle": "Written",
+        "translation": "Escribir",
+        "eng_example": "I think this might be the most beautiful story ever written.",
+        "esp_example": "Creo que ésta puede ser la historia más hermosa jamás escrita."
+    }
+]
