@@ -5,16 +5,20 @@ use serde::{Deserialize, Serialize};
 pub struct IrregularVerb {
     pub infinitive      : String,
     pub simple_past     : String,
-    pub past_participle : String
+    pub past_participle : String,
+    pub eng_example     : String,
+    pub esp_example     : String
 }
 
 impl IrregularVerb {
 
-    pub fn new(infinitive: String, simple_past: String, past_participle: String) -> IrregularVerb {
+    pub fn new(infinitive: String, simple_past: String, past_participle: String, eng_example: String, esp_example: String) -> IrregularVerb {
         IrregularVerb {
             infinitive,
             simple_past,
-            past_participle
+            past_participle,
+            eng_example,
+            esp_example
         }
     }
 }
