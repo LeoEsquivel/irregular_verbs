@@ -36,6 +36,9 @@ export class SlotMachine {
 
     getRandomVerb() {
         if (this.#total_verbs <= 0) return Error("Lista de verbos vacia.");
+        if (this.#verbs_used.length >= this.#total_verbs) {
+            this.#cleanListUsed();
+        }
 
         const random_number = Math.floor(Math.random() * this.#total_verbs);
         
@@ -53,5 +56,8 @@ export class SlotMachine {
         localStorage.setItem("verbs_used", JSON.stringify(this.#verbs_used));
     }
 
-
+    #cleanListUsed() {
+        localStorage.setItem("verbs_used", JSON.stringify([]));
+        this.#verbs_used = [];
+    }
 }
