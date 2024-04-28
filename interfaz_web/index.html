@@ -17,31 +17,35 @@
               </a>
             </div>
         </nav>
-        <section>
-            <div class="container">
-                <div class="col mt-5">
-                    <div class="row">
-                        <div class="col slot">
-                            <div class="slot-label">Infinitive</div>
-                            <div id="infinitive" class="slot-text"></div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row p-0 m-0 mt-5">
+                    <div class="col-12 p-3 col-md mt-4">
+                        <div class="slot">
+                        <div class="slot-label">Infinitive</div>
+                        <div id="infinitive" class="slot-text" data-text></div>
                         </div>
-                        <div class="col slot">
-                            <div class="slot-label">Simple Past</div>
-                            <div id="simple_past" class="slot-text"></div>
+                    </div>
+                    <div class="col-12 p-3 col-md mt-4">
+                        <div class="slot">
+                        <div class="slot-label">Simple Past</div>
+                        <div id="simple_past" class="slot-text" data-text></div>
                         </div>
-                        <div class="col slot">
-                            <div class="slot-label">Past Participle</div>
-                            <div id="past_participle" class="slot-text"></div>
-                        </div>
-                        
-                        <div class="col button-container">
-                            <button id="btn_get_verb" class="btn btn-primary">Obtener palabra</button>
+                    </div>
+                    <div class="col-12 p-3 col-md mt-4">
+                        <div class="slot">
+
+                        <div class="slot-label">Past Participle</div>
+                        <div id="past_participle" class="slot-text" data-text></div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </header>
+                <div class="col-md button-container p-3">
+                    <button id="btn_get_verb" class="btn btn-get">Get Word</button>
+                </div>
+        </div>
+    </section>
 
     <script type="module" src="scripts/index.js"></script>
 </body>
