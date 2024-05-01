@@ -12,9 +12,13 @@
         <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">
-                <img src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                <img src="static/logo.png" alt="" width="35" height="35" class="d-inline-block align-text-top">
                 Irregular Verbs
               </a>
+              <div class="d-flex">
+                <img id="config" class="config" src="static/settings-svgrepo-com.svg" alt="Configuraciones" width="25" height="25"
+                     data-bs-toggle="modal" data-bs-target="#config_modal">
+              </div>
             </div>
         </nav>
     </header>
@@ -46,6 +50,24 @@
                 </div>
         </div>
     </section>
+
+    <div id="config_modal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+            </div>
+        </div>
+    </div>
 
     <script type="module" src="scripts/index.js"></script>
 </body>

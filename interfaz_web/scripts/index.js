@@ -14,8 +14,6 @@ btn_get_verb.addEventListener('click', (e) => {
     d.getElementById('simple_past').innerText = simple_past;
     d.getElementById('past_participle').innerText = past_participle;
 
-
-
 });
 
 
@@ -23,4 +21,4 @@ d.addEventListener('DOMContentLoaded', async () => {
     const verbs_list = await get_verbs();
     slot_machine.setVerbList(verbs_list);
 
-})
+});

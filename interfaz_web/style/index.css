@@ -3,6 +3,14 @@ body {
     color: #FFF;
 }
 
+.config {
+    transition: all 0.3s ease-out;
+}
+
+.config:hover {
+    transform: rotate(60deg);
+}
+
 .slot {
     position: relative; 
     background-color: #222;
