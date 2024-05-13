@@ -3,7 +3,6 @@ import { SlotMachine } from './slot_machine.js';
 
 const d = document;
 const btn_get_verb  = d.getElementById('btn_get_verb');
-const btn_example   = d.getElementById('btn_example');
 const tbody_example = d.getElementById("tbody_example")
 
 const slot_machine = new SlotMachine();
@@ -15,14 +14,13 @@ btn_get_verb.addEventListener('click', (e) => {
     d.getElementById('infinitive').innerText = infinitive;
     d.getElementById('simple_past').innerText = simple_past;
     d.getElementById('past_participle').innerText = past_participle;
+    d.getElementById('tooltip_trans').setAttribute('tooltip', translation);
     create_tr(eng_example, esp_example)
-    
 });
 
 d.addEventListener('DOMContentLoaded', async () => {
     const verbs_list = await get_verbs();
     slot_machine.setVerbList(verbs_list);
-
 });
 
 
