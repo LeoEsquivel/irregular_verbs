@@ -28,17 +28,17 @@ const create_tr = (eng_example = '', esp_example = '') => {
     tbody_example.innerHTML = "";
     
     const tr = d.createElement("tr");
+    
+    tr.appendChild(create_td(eng_example))
+    tr.appendChild(create_td(esp_example))
 
-    const td_eng = d.createElement("td");
-    td_eng.innerText = eng_example;
-
-    const td_esp = d.createElement("td");
-    td_esp.innerText = esp_example;
-
-    tr.appendChild(td_eng);
-    tr.appendChild(td_esp);
     tbody_example.appendChild(tr);
-    tbody_example.closest("table").style.display = "inline-block";
+    tbody_example.closest("table").style.display = "";
+}
 
-
+const create_td = (text_value = '') => {
+    const td = d.createElement("td");
+    td.classList.add("text-center")
+    td.innerText = text_value;
+    return td
 }
