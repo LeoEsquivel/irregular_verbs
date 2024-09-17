@@ -12,8 +12,8 @@ let word2guess          = undefined;
 
 d.addEventListener('DOMContentLoaded', async () => {
     const verbs_list = await get_verbs_temp();
-    word2guess = verbs_list[0].infinitive.split(" ")[1];
-    console.log(word2guess)
+    word2guess = verbs_list[2].infinitive.split(" ")[1];
+    console.log(word2guess);
     initBoard();
 });
 
@@ -25,7 +25,6 @@ d.addEventListener('keyup', (e) => {
     }
 
     let pressedKey = String(e.key);
-
     if(pressedKey === 'Backspace' && next_letter !== 0){
         deleteLetter();
         return
@@ -134,7 +133,7 @@ const checkGuess = () => {
             if(current_guess[i] === right_guess[i]){
                 letter_color = 'green';
             } else {
-                letter_color = 'yellow';
+                letter_color = '#EBC934';
             }
 
             right_guess[letter_position] = '#';
@@ -146,20 +145,21 @@ const checkGuess = () => {
             box.style.backgroundColor = letter_color;
             shadeKeyboard(letter, letter_color);
         }, delay);
+        
+    }
 
-        if(guess_string === word2guess){
-            alert('You guessed right! Game Over!');
-            guesses_remainig = 0;
-            return;
-        } else {
-            guesses_remainig -= 1;
-            current_guess = [];
-            next_letter = 0;
+    if(guess_string === word2guess){
+        alert('You guessed right! Game Over!');
+        guesses_remainig = 0;
+        return;
+    } else {
+        guesses_remainig -= 1;
+        current_guess = [];
+        next_letter = 0;
 
-            if(guesses_remainig === 0){
-                alert(`You've run out of guesses! Game over!\nThe right word was: ${word2guess}`);
+        if(guesses_remainig === 0){
+            alert(`You've run out of guesses! Game over!\nThe right word was: ${word2guess}`);
 
-            }
         }
     }
 
