@@ -83,20 +83,19 @@ const deleteLetter = () => {
 }
 
 const shadeKeyboard = (letter, color) => {
-    for(const elem of d.getElementsByClassName('keyboard-button')){
-        if(elem.textContent === letter){
-            let old_color = elem.style.backgroundColor;
-            if(old_color === 'green'){
-                return
-            }
+    const keyboard_key = d.getElementById(letter) || undefined;
 
-            if(old_color === 'yellow' && color !== 'green'){
-                return
-            }
-
-            elem.style.backgroundColor = color;
-            break;
+    if(keyboard_key) {
+        let old_color = keyboard_key.style.backgroundColor;
+        if(old_color === 'green'){
+            return
         }
+
+        if(old_color === 'yellow' && color !== 'green'){
+            return
+        }
+
+        keyboard_key.style.backgroundColor = color;
     }
 }
 
