@@ -60,4 +60,8 @@ export class SlotMachine {
         localStorage.setItem("verbs_used", JSON.stringify([]));
         this.#verbs_used = [];
     }
+
+    getSize() {
+        return this.#total_verbs;
+    }
 }
