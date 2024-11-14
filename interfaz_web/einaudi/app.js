@@ -1,5 +1,6 @@
 // Cache elementos de plantillas cargadas.
-const templateCache = {};
+const templateCache = {}; //Cache HTML crudo
+const processedCache = {};
 
 /**
  * Carga una plantilla desde un archivo HTML externo e inserta su contenido en un contenedor.
@@ -8,29 +9,30 @@ const templateCache = {};
  * @param {string} templateId - ID del elemento <template> en el archivo externo.
  * @param {string} containerId - ID del contenedor donde se insertará la plantilla.
  */
-export async function loadTemplate(filePath, templateId, containerId) {
+export async function loadTemplate(templatePath, templateId, containerId) {
     try {
-      // Verificar si la plantilla ya está en caché
-      if (templateCache[filePath]) {
-        console.log(`Plantilla desde caché: ${templateId}`);
-        insertTemplate(templateCache[filePath], templateId, containerId);
+      // Verificar si ya se ha procesado esta plantilla
+      if (processedCache[templateId]) {
+        console.log(`Usando plantilla procesada desde caché: ${templateId}`);
+        document.getElementById(containerId).innerHTML = processedCache[templateId];
         return;
       }
-  
-      // Cargar el archivo HTML externo
-      const response = await fetch(filePath);
-      const htmlText = await response.text();
-  
-      // Crear un elemento temporal para parsear el HTML
+
+      // Verificar si la plantilla cruda ya está en caché
+      if (!templateCache[templatePath]) {
+        console.log(`Cargando plantilla desde archivo: ${templatePath}`);
+        const response = await fetch(templatePath);
+        const html = await response.text();
+        templateCache[templatePath] = html;
+      }
+
+      // Insertar y procesar la plantilla
       const tempDiv = document.createElement('div');
-      tempDiv.innerHTML = htmlText;
-  
-      // Guardar el contenido en caché
-      templateCache[filePath] = tempDiv;
-  
-      // Insertar la plantilla
+      tempDiv.innerHTML = templateCache[templatePath];
       insertTemplate(tempDiv, templateId, containerId);
-      executeScripts(containerId);
+      
+      // Guardar la versión procesada en caché
+      processedCache[templateId] = document.getElementById(containerId).innerHTML;
     } catch (error) {
       console.error('Error al cargar la plantilla:', error);
     }
@@ -45,13 +47,16 @@ export async function loadTemplate(filePath, templateId, containerId) {
 function insertTemplate(tempDiv, templateId, containerId) {
     const template = tempDiv.querySelector(`#${templateId}`);
     const container = document.getElementById(containerId);
-  
-    if (template && container) {
-      container.insertAdjacentHTML('beforeend', template.innerHTML);
-      console.log(`Plantilla '${templateId}' insertada en el contenedor '${containerId}'`);
-    } else {
+    console.log(container)
+    if (!template && !container) {
       console.error('No se encontró la plantilla o el contenedor');
-    }
+      return;
+    } 
+
+    container.innerHTML = template.innerHTML;
+    console.log(`Plantilla '${templateId}' insertada en el contenedor '${containerId}'`);
+    // Ejecutar los scripts internos
+    executeScripts(containerId);
   }
 
 /**
@@ -67,18 +72,14 @@ function executeScripts(containerId) {
 
   scripts.forEach((script) => {
     const newScript = document.createElement('script');
-    // Copiar el contenido y los atributos del script original
+    newScript.type = script.type || 'text/javascript';
+
     if (script.src) {
       newScript.src = script.src;
-      newScript.type = "module";
     } else {
       newScript.textContent = script.textContent;
-      newScript.type = "module";
     }
-    Array.from(script.attributes).forEach((attr) =>
-      newScript.setAttribute(attr.name, attr.value)
-    );
-    // Reemplazar el script para que se ejecute
+
     script.parentNode.replaceChild(newScript, script);
   });
 
