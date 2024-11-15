@@ -1,4 +1,5 @@
-import { get_verbs_temp } from './services/http.services.js';
+import { get_verbs } from './services/http.services.js';
+import { eventManager } from '../einaudi/eventdelegationmanager.js';
 
 const d = document;
 
@@ -10,14 +11,18 @@ let word2guess          = undefined;
 
 
 
-d.addEventListener('DOMContentLoaded', async () => {
-    const verbs_list = await get_verbs_temp();
-    word2guess = verbs_list[2].infinitive.split(" ")[1];
-    console.log(word2guess);
-    initBoard();
-});
+// d.addEventListener('DOMContentLoaded', async () => {
+//     const verbs_list = await get_verbs_temp();
+//     word2guess = verbs_list[2].infinitive.split(" ")[1];
+//     console.log(word2guess);
+//     initBoard();
+// });
 
-d.addEventListener('keyup', (e) => {
+const verbs_list = await get_verbs();
+word2guess = verbs_list[2].infinitive.split(" ")[1];
+console.log(eventManager);
+
+eventManager.addEventListener('document','keyup', (e) => {
     e.preventDefault();
 
     if(guesses_remainig === 0){
@@ -166,3 +171,5 @@ const checkGuess = () => {
 
 
 }
+
+initBoard();
