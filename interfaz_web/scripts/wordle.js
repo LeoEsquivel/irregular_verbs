@@ -4,7 +4,7 @@ import { eventManager } from '../einaudi/eventdelegationmanager.js';
 const d = document;
 
 const NUMBER_OF_GUESSES = 6;
-let guesses_remainig = NUMBER_OF_GUESSES;
+let guesses_remainig    = NUMBER_OF_GUESSES;
 let current_guess       = [];
 let next_letter         = 0;
 let word2guess          = undefined; 
@@ -20,7 +20,6 @@ let word2guess          = undefined;
 
 const verbs_list = await get_verbs();
 word2guess = verbs_list[2].infinitive.split(" ")[1];
-console.log(eventManager);
 
 eventManager.addEventListener('document','keyup', (e) => {
     e.preventDefault();
@@ -49,13 +48,13 @@ eventManager.addEventListener('document','keyup', (e) => {
 });
 
 const initBoard = () => {
-    let board = d.getElementById("game_board");
+    const board = d.getElementById("game_board");
     for(let i=0; i< NUMBER_OF_GUESSES; i++){
-        let row = d.createElement("div");
+        const row = d.createElement("div");
         row.className = "letter-row";
 
         for(let j=0; j < word2guess.length; j++){
-            let box = d.createElement("div");
+            const box = d.createElement("div");
             box.className = "letter-box";
             row.appendChild(box);
         }
@@ -70,8 +69,8 @@ const insertLetter = (pressedKey) => {
 
     pressedKey = pressedKey.toLowerCase();
 
-    let row = d.getElementsByClassName("letter-row")[6-guesses_remainig];
-    let box = row.children[next_letter];
+    const row = d.getElementsByClassName("letter-row")[6-guesses_remainig];
+    const box = row.children[next_letter];
     box.textContent = pressedKey;
     box.classList.add("filled-box");
     current_guess.push(pressedKey);
@@ -79,8 +78,8 @@ const insertLetter = (pressedKey) => {
 }
 
 const deleteLetter = () => {
-    let row = d.getElementsByClassName("letter-row")[6-guesses_remainig];
-    let box = row.children[next_letter - 1];
+    const row = d.getElementsByClassName("letter-row")[6-guesses_remainig];
+    const box = row.children[next_letter - 1];
     box.textContent = '';
     box.classList.remove("fillex-box");
     current_guess.pop();
@@ -91,7 +90,7 @@ const shadeKeyboard = (letter, color) => {
     const keyboard_key = d.getElementById(letter) || undefined;
 
     if(keyboard_key) {
-        let old_color = keyboard_key.style.backgroundColor;
+        const old_color = keyboard_key.style.backgroundColor;
         if(old_color === 'green'){
             return
         }
@@ -105,9 +104,10 @@ const shadeKeyboard = (letter, color) => {
 }
 
 const checkGuess = () => {
-    let row = d.getElementsByClassName("letter-row")[6-guesses_remainig];
+    const row = d.getElementsByClassName("letter-row")[6-guesses_remainig];
+    console.log(row)
     let guess_string = '';
-    let right_guess = Array.from(word2guess);
+    const right_guess = Array.from(word2guess);
 
     for(const val of current_guess){
         guess_string += val;
@@ -124,8 +124,8 @@ const checkGuess = () => {
 
     for(let i=0; i < word2guess.length; i++){
         let letter_color = '';
-        let box = row.children[i];
-        let letter = current_guess[i];
+        const box = row.children[i];
+        const letter = current_guess[i];
 
         let letter_position = right_guess.indexOf(current_guess[i]);
         // is letter in the correct guess
