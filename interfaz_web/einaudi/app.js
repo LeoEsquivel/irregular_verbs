@@ -1,87 +1,104 @@
-// Cache elementos de plantillas cargadas.
-const templateCache = {}; //Cache HTML crudo
-const processedCache = {};
+import { stateManager } from "./stateManager.js";
 
 /**
- * Carga una plantilla desde un archivo HTML externo e inserta su contenido en un contenedor.
+ * Cache de plantillas para evitar múltiples cargas.
+ * @type {Map<string, string>}
+ */
+const templateCache = new Map();
+
+/**
+ * Carga una plantilla desde un archivo HTML externo y la inserta en un contenedor.
  * Utiliza caché para evitar cargar el archivo más de una vez.
- * @param {string} filePath - Ruta del archivo HTML que contiene la plantilla.
- * @param {string} templateId - ID del elemento <template> en el archivo externo.
- * @param {string} containerId - ID del contenedor donde se insertará la plantilla.
+ * Restaura el estado usando el StateManager.
+ * @async
+ * @param {string} templatePath - Ruta del archivo HTML que contiene la plantilla.
+ * @param {string} templateId   - ID del elemento <template> en el archivo externo.
+ * @param {string} containerId  - ID del contenedor donde se insertará la plantilla.
+ * @returns {Promise<void>}
  */
-export async function loadTemplate(templatePath, templateId, containerId) {
-    try {
-      // Verificar si ya se ha procesado esta plantilla
-      if (processedCache[templateId]) {
-        console.log(`Usando plantilla procesada desde caché: ${templateId}`);
-        document.getElementById(containerId).innerHTML = processedCache[templateId];
-        return;
-      }
-
-      // Verificar si la plantilla cruda ya está en caché
-      if (!templateCache[templatePath]) {
-        console.log(`Cargando plantilla desde archivo: ${templatePath}`);
-        const response = await fetch(templatePath);
-        const html = await response.text();
-        templateCache[templatePath] = html;
-      }
-
-      // Insertar y procesar la plantilla
-      const tempDiv = document.createElement('div');
-      tempDiv.innerHTML = templateCache[templatePath];
-      insertTemplate(tempDiv, templateId, containerId);
-      
-      // Guardar la versión procesada en caché
-      processedCache[templateId] = document.getElementById(containerId).innerHTML;
-    } catch (error) {
-      console.error('Error al cargar la plantilla:', error);
-    }
-}
-
-/**
- * Inserta el contenido de una plantilla en el contenedor especificado.
- * @param {HTMLElement} tempDiv - Elemento temporal que contiene la plantilla.
- * @param {string} templateId - ID de la plantilla a insertar.
- * @param {string} containerId - ID del contenedor donde se insertará la plantilla.
- */
-function insertTemplate(tempDiv, templateId, containerId) {
-    const template = tempDiv.querySelector(`#${templateId}`);
+export const loadTemplate = async (templatePath, templateId, containerId) => {
+  try {
     const container = document.getElementById(containerId);
-    console.log(container)
-    if (!template && !container) {
-      console.error('No se encontró la plantilla o el contenedor');
-      return;
+
+    //Verificar si la plantilla ya está en caché
+    let html = templateCache.get(templateId);
+    if(!html){
+      // Cargar desde el archivo si no esta en caché y guardarlo.
+      const response = await fetch(templatePath);
+      html = await response.text();
+
+      templateCache.set(templateId, html);
     } 
 
-    container.innerHTML = template.innerHTML;
-    console.log(`Plantilla '${templateId}' insertada en el contenedor '${containerId}'`);
-    // Ejecutar los scripts internos
-    executeScripts(containerId);
-  }
+    // Insertar plantilla en el contenedor.
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = html;
 
-/**
- * Ejecuta los scripts internos que se encuentran dentro del contenedor especificado.
- * @param {string} containerId - ID del contenedor donde se han insertado los scripts.
- */
-function executeScripts(containerId) {
-  const container = document.getElementById(containerId);
-  if (!container) return;
+    // Seleccionar el template y clonarlo
+    const templateElement = tempDiv.querySelector(`#${templateId}`);
 
-  // Seleccionar todos los scripts embebidos
-  const scripts = container.querySelectorAll('script');
+    if (templateElement) {
+      const templateContent = templateElement.content.cloneNode(true);
+      container.innerHTML = ''; // Limpiar el contenedor
+      container.appendChild(templateContent);
 
-  scripts.forEach((script) => {
-    const newScript = document.createElement('script');
-    newScript.type = script.type || 'text/javascript';
-
-    if (script.src) {
-      newScript.src = script.src;
-    } else {
-      newScript.textContent = script.textContent;
+      // Ejecutar scripts dentro de la plantilla
+      runScripts(container);
     }
 
-    script.parentNode.replaceChild(newScript, script);
-  });
+    // Restaurar el estado si existe.
+    const savedState = stateManager.getState(templateId);
+    
+    if(savedState) {
+      applyStateToDOM(savedState);
+    }
 
-  console.log('Scripts internos ejecutados');
-}
+    // //Ejecuta scripts
+    // runScripts(containerId);
+
+  } catch (error) {
+    console.error(`Error al cargar la plantilla ${templateId}:`, error);
+  }
+};
+
+/**
+ * Aplica el estado guardado en el DOM.
+ * @param {Object} state - Objeto de estado con pares de ID de elementos y sus valores.
+ */
+const applyStateToDOM = (state) => {
+  debugger
+  Object.entries(state).forEach(([ id, { type, value } ]) => {
+    const element = document.querySelector(id);
+    if(type === "childList" && element) {
+      element.replaceWith(value);
+    } else if (type === "style" && element){
+      element.style.cssText = value;
+    }
+  });
+};
+
+/**
+ * Ejecuta los scripts contenidos en el HTML cargado.
+ * @param {string} containerId - ID del contenedor donde se han insertado los scripts.
+ */
+const runScripts = (container) => {
+  container.querySelectorAll('script').forEach((script) => {
+      const newScript = document.createElement('script');
+      newScript.type = script.type || 'text/javascript';
+
+      // Si el script es un módulo, lo tratamos como tal
+      if (script.type === 'module') {
+          newScript.type = 'module';
+      }
+
+      // Clonar el contenido del script original
+      if (script.src) {
+          newScript.src = script.src;
+      } else {
+          newScript.textContent = script.textContent;
+      }
+
+      // Insertar y ejecutar el script
+      container.appendChild(newScript);
+  });
+};
