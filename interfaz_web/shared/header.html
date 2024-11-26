@@ -23,9 +23,9 @@
     <script type="module">
         import { loadTemplate } from './einaudi/app.js';
         import { eventManager } from './einaudi/eventdelegationmanager.js';
+        import { global } from './einaudi/global.js'
 
         const pages_route = './pages/';
-        
         eventManager.addEventListener('#navbar-container','click', (e) => {
             e.preventDefault();
 
@@ -34,14 +34,17 @@
             const link = getTargetALink(target);
 
             if(link && (link.matches('#irregular') || link.matches('#main'))){
+                
                 loadTemplate(`${pages_route}slot_machine.html`, 'slot_machine_template', 'body');
                 actualizar_active(link);
+                global.currentPage = "slot_machine_template";
                 return;
             }
 
             if(link && link.matches('#woordle')){
                 loadTemplate(`${pages_route}woordle.html`, 'woordle_template', 'body');
                 actualizar_active(link);
+                global.currentPage = "woordle_template";
                 return;
             }
             
