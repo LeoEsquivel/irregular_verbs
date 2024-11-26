@@ -5,8 +5,6 @@ export const observerMutations = (containerId, callback) => {
         mutations.forEach((mutation) => {
 
             const { target } = mutation;
-            debugger
-
             if(mutation.type === 'childList'){
                 // Cambios estructurales
                 callback({type: 'childList', target});
