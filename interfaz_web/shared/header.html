@@ -12,6 +12,9 @@
                 <li class="nav-item" style="display: none;">
                     <a id="woordle" class="nav-link" href="#">Woordle</a>
                 </li>
+                <li class="nav-item">
+                    <a id="lista" class="nav-link" href="#">Lista</a>
+                </li>
             </ul>
 
             <!-- <div class="d-flex">
@@ -31,8 +34,7 @@
 
             const { target } = e;
 
-            const link = getTargetALink(target);
-
+            const link = target.closest('a');
             if(link && (link.matches('#irregular') || link.matches('#main'))){
                 
                 loadTemplate(`${pages_route}slot_machine.html`, 'slot_machine_template', 'body');
@@ -47,6 +49,13 @@
                 global.currentPage = "woordle_template";
                 return;
             }
+
+            if(link && link.matches('#lista')){
+                loadTemplate(`${pages_route}lista.html`, 'lista_template', 'body');
+                actualizar_active(link);
+                global.currentPage = "lista_template";
+                return;
+            }
             
         });
 
@@ -54,15 +63,6 @@
             document.querySelector("a.active").classList.remove('active');
             current_target.classList.add('active');
             
-        }
-
-        const getTargetALink = (target) => {
-            if (!target) return;
-            let elemName = target.tagName.toLowerCase();
-            if(elemName == 'a')    return target;
-            if(elemName == 'svg')  return target.closest('a');
-            if(elemName == 'img')  return target.closest('a');     
-            if(elemName == 'path') return target.closest('a'); 
         }
     </script>
 </template>   
