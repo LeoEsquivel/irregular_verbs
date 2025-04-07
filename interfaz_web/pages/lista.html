@@ -1,9 +1,26 @@
 <template id="lista_template">
+    <style>
+        .verbos_titulo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .verbos_item > a {
+            text-decoration: none;
+            color: #FFF;
+        }
+
+        .verbos_lista {
+            list-style: none;
+            padding-left: 0;
+        }
+    </style>
+
     <article class="container">
-        <div class="row">
-            <div style="background-color: aqua;" class="col-4 h-100"></div>
-            <div style="background-color: red;" class="col-4 h-100"></div>
-            <div style="background-color: green;"class="col-4 h-100"></div>
+        <div class="row p-0 m-0">
+            <div id="contenedor-lista1" class="col-12 p-3 col-md mt-3 h-100"></div>
+            <div id="contenedor-lista2" class="col-12 p-3 col-md mt-3 h-100"></div>
+            <div id="contenedor-lista3" class="col-12 p-3 col-md mt-3 h-100"></div>
         </div>
     </article>
     <script type="module" src="./scripts/lista.js"></script>
