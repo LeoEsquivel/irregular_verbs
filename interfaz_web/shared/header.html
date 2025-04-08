@@ -1,21 +1,38 @@
 <template id="navbar_template">
+
+    <style>
+        #navbar {
+            overflow: hidden;
+            transition: height 200ms;
+        }
+
+    </style>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div id="navbar-container" class="container-fluid">
             <a id="main" class="navbar-brand" href="#">
                 <img src="./static/logo.png" alt="" width="35" height="35" class="d-inline-block align-text-top">
                 Irregular Verbs
             </a>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a id="irregular" class="nav-link active" href="#">Irregular Verbs</a>
-                </li>
-                <li class="nav-item" style="display: none;">
-                    <a id="woordle" class="nav-link" href="#">Woordle</a>
-                </li>
-                <li class="nav-item">
-                    <a id="lista" class="nav-link" href="#">List</a>
-                </li>
-            </ul>
+
+            <button class="navbar-toggler" id="toggler" type="button" aria-label="Toggle" role="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul id="list" class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a id="irregular" class="nav-link active" href="#">Irregular Verbs</a>
+                    </li>
+                    <li class="nav-item" style="display: none;">
+                        <a id="woordle" class="nav-link" href="#">Woordle</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="lista" class="nav-link" href="#">List</a>
+                    </li>
+                </ul>
+            </div>
+
+
 
             <!-- <div class="d-flex">
                 <img style="display: none;" id="config" class="config" src="../static/settings-svgrepo-com.svg" alt="Configuraciones" width="25" height="25"
@@ -29,34 +46,47 @@
         import { global } from './einaudi/global.js'
 
         const pages_route = './pages/';
-        eventManager.addEventListener('#navbar-container','click', (e) => {
+        eventManager.addEventListener('#navbar-container', 'click', (e) => {
             e.preventDefault();
-
             const { target } = e;
 
             const link = target.closest('a');
-            if(link && (link.matches('#irregular') || link.matches('#main'))){
-                
+            if (link && (link.matches('#irregular') || link.matches('#main'))) {
+
                 loadTemplate(`${pages_route}slot_machine.html`, 'slot_machine_template', 'body');
                 actualizar_active(link);
                 global.currentPage = "slot_machine_template";
                 return;
             }
 
-            if(link && link.matches('#woordle')){
+            if (link && link.matches('#woordle')) {
                 loadTemplate(`${pages_route}woordle.html`, 'woordle_template', 'body');
                 actualizar_active(link);
                 global.currentPage = "woordle_template";
                 return;
             }
 
-            if(link && link.matches('#lista')){
+            if (link && link.matches('#lista')) {
                 loadTemplate(`${pages_route}lista.html`, 'lista_template', 'body');
                 actualizar_active(link);
                 global.currentPage = "lista_template";
                 return;
             }
-            
+            const button = target.closest('#toggler');
+            if (button) {
+                const list    = document.getElementById("list");
+                const wrapper = document.getElementById("navbar");
+
+                if(wrapper.classList.contains('open')){
+                    wrapper.classList.remove("open", "show");
+                    wrapper.style.height = "0px";
+                } else {
+                    wrapper.classList.add("open", "show");
+                    wrapper.style.height = list.offsetHeight + "px";
+                }
+                return
+            }
+
         });
 
         const actualizar_active = (current_target) => {
@@ -64,4 +94,4 @@
             current_target.classList.add('active');
         }
     </script>
-</template>   
+</template>
