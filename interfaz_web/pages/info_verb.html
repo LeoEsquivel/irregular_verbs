@@ -1,0 +1,47 @@
+<template id="info_verb">
+    <style>
+    </style>
+    <button id="actualizar" style="display: none;"></button>
+    <article class="container">
+        <div class="row p-0 m-0 mt-5">
+            <div class="col-12 p-3 col-md mt-4">
+                <div class="slot">
+                    <div class="slot-label">Infinitive
+                        <span id="tooltip_trans" tooltip="">
+                            <img src="static/quiestion_circle.svg"></img>
+                        </span>
+                    </div>
+                    <div id="infinitive" class="slot-text" data-text></div>
+                </div>
+            </div>
+            <div class="col-12 p-3 col-md mt-4">
+                <div class="slot">
+                    <div class="slot-label">Simple Past</div>
+                    <div id="simple_past" class="slot-text" data-text></div>
+                </div>
+            </div>
+            <div class="col-12 p-3 col-md mt-4">
+                <div class="slot">
+
+                    <div class="slot-label">Past Participle</div>
+                    <div id="past_participle" class="slot-text" data-text></div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article class="container mt-4 mx-auto d-block">
+        <table class="table table_example">
+            <thead>
+                <tr>
+                    <th scope="col" class="text-center">English Example</th>
+                    <th scope="col" class="text-center">Spanish Example</th>
+                </tr>
+            </thead>
+            <tbody id="tbody_example">
+            </tbody>
+        </table>
+    </article>
+
+    <script type="module" src="./scripts/info_verb.js"></script>
+</template>

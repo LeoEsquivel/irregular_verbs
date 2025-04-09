@@ -1,5 +1,7 @@
 import { eventManager } from '../einaudi/eventdelegationmanager.js';
 import { get_verbs } from './services/http.services.js';
+import { loadTemplate } from '../einaudi/app.js';
+import { global } from '../einaudi/global.js';
 
 const obtener_verbos = async () => {
     const verbos = await get_verbs();
@@ -65,12 +67,19 @@ const crear_lista = (contenedor, lista) => {
 
         const lista_item = document.createElement('li');
         lista_item.classList.add('verbos_item');
-        // lista_item.innerHTML = `<a href="/${verb}">${verb}</a>`;
-        lista_item.innerHTML = `<a href="#">${verb}</a>`;
+        lista_item.innerHTML = `<span data-verb="${verb}" class="verb">${verb}</span>`;
         lista_item.setAttribute('id', verb);
         lista_actual.appendChild(lista_item);
     });
 }
+
+eventManager.addEventListener(".verb", "click", (e) => {
+    const { target } = e;
+    const pages_route = './pages/';
+    location.hash = `#${target.dataset.verb}`;
+    global.currentPage = "info_verb_template";
+    loadTemplate(`${pages_route}info_verb.html`, 'info_verb', 'body');
+});
 
 const template_seccion = (letra) => {
     const contenedor = document.createElement('div');

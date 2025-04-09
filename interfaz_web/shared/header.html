@@ -5,7 +5,6 @@
             overflow: hidden;
             transition: height 200ms;
         }
-
     </style>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -24,10 +23,10 @@
                         <a id="irregular" class="nav-link active" href="#">Irregular Verbs</a>
                     </li>
                     <li class="nav-item" style="display: none;">
-                        <a id="woordle" class="nav-link" href="#">Woordle</a>
+                        <a id="woordle" class="nav-link" href="#/woordle">Woordle</a>
                     </li>
                     <li class="nav-item">
-                        <a id="lista" class="nav-link" href="#">List</a>
+                        <a id="lista" class="nav-link" href="#/list">List</a>
                     </li>
                 </ul>
             </div>
@@ -43,19 +42,18 @@
     <script type="module">
         import { loadTemplate } from './einaudi/app.js';
         import { eventManager } from './einaudi/eventdelegationmanager.js';
-        import { global } from './einaudi/global.js'
+        import { global } from './einaudi/global.js';
 
         const pages_route = './pages/';
         eventManager.addEventListener('#navbar-container', 'click', (e) => {
             e.preventDefault();
             const { target } = e;
-
             const link = target.closest('a');
             if (link && (link.matches('#irregular') || link.matches('#main'))) {
-
                 loadTemplate(`${pages_route}slot_machine.html`, 'slot_machine_template', 'body');
                 actualizar_active(link);
                 global.currentPage = "slot_machine_template";
+                location.hash = "";
                 return;
             }
 
@@ -63,6 +61,7 @@
                 loadTemplate(`${pages_route}woordle.html`, 'woordle_template', 'body');
                 actualizar_active(link);
                 global.currentPage = "woordle_template";
+                location.hash = "woordle";
                 return;
             }
 
@@ -70,20 +69,12 @@
                 loadTemplate(`${pages_route}lista.html`, 'lista_template', 'body');
                 actualizar_active(link);
                 global.currentPage = "lista_template";
+                location.hash = "lista";
                 return;
             }
             const button = target.closest('#toggler');
             if (button) {
-                const list    = document.getElementById("list");
-                const wrapper = document.getElementById("navbar");
-
-                if(wrapper.classList.contains('open')){
-                    wrapper.classList.remove("open", "show");
-                    wrapper.style.height = "0px";
-                } else {
-                    wrapper.classList.add("open", "show");
-                    wrapper.style.height = list.offsetHeight + "px";
-                }
+                wrap_bar();
                 return
             }
 
@@ -92,6 +83,20 @@
         const actualizar_active = (current_target) => {
             document.querySelector("a.active").classList.remove('active');
             current_target.classList.add('active');
+        }
+
+        const wrap_bar = () => {
+
+            const list = document.getElementById("list");
+            const wrapper = document.getElementById("navbar");
+            if (wrapper.classList.contains('open')) {
+                wrapper.classList.remove("open", "show");
+                wrapper.style.height = "0px";
+            } else {
+                wrapper.classList.add("open", "show");
+                wrapper.style.height = list.offsetHeight + "px";
+            }
+
         }
     </script>
 </template>
