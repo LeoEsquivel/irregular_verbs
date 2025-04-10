@@ -19,10 +19,22 @@
             position: relative;
             border-bottom: 2px solid #fff;
             text-align: center;
-            line-height: 100px;
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        .slot-label-modal {
+            position: absolute;
+            top: -25px;
+            left: 0;
+            width: 100%;
+            font-size: 1em;
+            color: #fff;
+        }
+
+        .modal-header {
+            border-bottom: 0px;
         }
 
         /* MODAL */
@@ -98,7 +110,7 @@
                             <div class="row">
                                 <div class="col-12 p-3 col-md mt-4">
                                     <div class="slot_modal">
-                                        <div class="slot-label">Infinitive
+                                        <div class="slot-label-modal">Infinitive
                                             <span id="tooltip_trans" tooltip="">
                                                 <img src="static/quiestion_circle.svg"></img>
                                             </span>
@@ -108,19 +120,19 @@
                                 </div>
                                 <div class="col-12 p-3 col-md mt-4">
                                     <div class="slot_modal">
-                                        <div class="slot-label">Simple Past</div>
+                                        <div class="slot-label-modal">Simple Past</div>
                                         <div id="simple_past" class="slot-text" data-text></div>
                                     </div>
                                 </div>
                                 <div class="col-12 p-3 col-md mt-4">
                                     <div class="slot_modal">
-                                        <div class="slot-label">Past Participle</div>
+                                        <div class="slot-label-modal">Past Participle</div>
                                         <div id="past_participle" class="slot-text" data-text></div>
                                     </div>
                                 </div>
                             </div>
                         </article>
-                    
+
                         <article class="container mt-4 mx-auto d-block">
                             <table class="table table_example">
                                 <thead>
