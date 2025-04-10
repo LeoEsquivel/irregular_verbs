@@ -1,16 +1,30 @@
 import { eventManager } from '../einaudi/eventdelegationmanager.js';
 import { get_verbs } from './services/http.services.js';
-import { loadTemplate } from '../einaudi/app.js';
-import { global } from '../einaudi/global.js';
+
+
+const d = document;
+const modalBackdrop = document.getElementById('modalBackdrop');
+const modal = document.getElementById("modal_info_verb");
+
+const lista_verbos_ordenados = [];
 
 const obtener_verbos = async () => {
     const verbos = await get_verbs();
-    return verbos.map(verb => verb.infinitive.split(' ')[1])
+    return verbos.map(verb => {
+        return {
+            'infinitive': verb.infinitive.split(' ')[1],
+            "simple_past": verb.simple_past,
+            "past_participle": verb.past_participle,
+            "translation": verb.translation,
+            "eng_example": verb.eng_example,
+            "esp_example": verb.esp_example
+        }
+    })
 }
 
 const ordenar_verbos = (lista_verbos) => {
     const collocator = new Intl.Collator('en', { sensitivity: 'base' });
-    return lista_verbos.sort(collocator.compare);
+    return lista_verbos.sort((a, b) => collocator.compare(a['infinitive'], b['infinitive']));
 }
 
 const separar_lista = (lista_verbos) => {
@@ -29,8 +43,8 @@ const separar_lista = (lista_verbos) => {
 const encontrar_indice = (arreglo, letra) => {
     if (arreglo.length === 0) return 0;
 
-    const primera_letra = arreglo[0].charAt(0).toUpperCase();
-    const ultima_letra = arreglo[arreglo.length - 1].charAt(0).toUpperCase();
+    const primera_letra = arreglo[0].infinitive.charAt(0).toUpperCase();
+    const ultima_letra = arreglo[arreglo.length - 1].infinitive.charAt(0).toUpperCase();
 
     if (primera_letra >= letra) return 0;
     if (ultima_letra < letra) return arreglo.length - 1;
@@ -40,7 +54,7 @@ const encontrar_indice = (arreglo, letra) => {
 
     while (inicio <= fin) {
         const medio = Math.floor((inicio + fin) / 2);
-        if (arreglo[medio].charAt(0).toUpperCase() < letra) {
+        if (arreglo[medio].infinitive.charAt(0).toUpperCase() < letra) {
             inicio = medio + 1;
         } else {
             fin = medio;
@@ -55,11 +69,11 @@ const encontrar_indice = (arreglo, letra) => {
 
 const crear_lista = (contenedor, lista) => {
     let letra_actual = undefined;
-    let seccion      = undefined;
+    let seccion = undefined;
     let lista_actual = undefined;
     lista.forEach((verb, index) => {
-        if(letra_actual !== verb.charAt(0).toUpperCase()){
-            letra_actual = lista[index].charAt(0).toUpperCase();
+        if (letra_actual !== verb.infinitive.charAt(0).toUpperCase()) {
+            letra_actual = lista[index].infinitive.charAt(0).toUpperCase();
             seccion = template_seccion(letra_actual);
             contenedor.appendChild(seccion);
             lista_actual = document.getElementById(`lista_${letra_actual}`);
@@ -67,19 +81,11 @@ const crear_lista = (contenedor, lista) => {
 
         const lista_item = document.createElement('li');
         lista_item.classList.add('verbos_item');
-        lista_item.innerHTML = `<span data-verb="${verb}" class="verb">${verb}</span>`;
-        lista_item.setAttribute('id', verb);
+        lista_item.innerHTML = `<span data-verb="${verb.infinitive}" data-index=${index} class="verb">${verb.infinitive}</span>`;
+        lista_item.setAttribute('id', verb.infinitive);
         lista_actual.appendChild(lista_item);
     });
 }
-
-eventManager.addEventListener(".verb", "click", (e) => {
-    const { target } = e;
-    const pages_route = './pages/';
-    location.hash = `#${target.dataset.verb}`;
-    global.currentPage = "info_verb_template";
-    loadTemplate(`${pages_route}info_verb.html`, 'info_verb', 'body');
-});
 
 const template_seccion = (letra) => {
     const contenedor = document.createElement('div');
@@ -93,9 +99,85 @@ const template_seccion = (letra) => {
     return contenedor;
 }
 
+const create_tr = (eng_example = '', esp_example = '') => {
+    const tbody_example = d.getElementById("tbody_example");
+
+    tbody_example.innerHTML = "";
+    tbody_example.closest("table").style.display = "table";
+
+    const tr = d.createElement("tr");
+
+    tr.appendChild(create_td(eng_example))
+    tr.appendChild(create_td(esp_example))
+    tbody_example.appendChild(tr);
+}
+
+const create_td = (text_value = '') => {
+    const td = d.createElement("td");
+    td.classList.add("text-center")
+    td.innerText = text_value;
+    return td
+}
+
+const abrir_modal = () => {
+    modalBackdrop.style.display = 'block';
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+const cerrar_modal = () => {
+    modalBackdrop.style.display = 'none';
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+}
+
+const mostrar_informacion_modal = (verb) => {
+    const { infinitive, simple_past, past_participle, translation, eng_example, esp_example } = verb;
+
+    const titulo_infinitive = titulo(infinitive);
+    d.getElementById('infinitive').innerText = titulo_infinitive;
+    d.getElementById('simple_past').innerText = simple_past;
+    d.getElementById('past_participle').innerText = past_participle;
+    d.getElementById('tooltip_trans').setAttribute('tooltip', translation);
+    d.getElementById("verb").innerText = titulo_infinitive;
+    create_tr(eng_example, esp_example);
+}
+
+const titulo = (texto) => {
+    if (!texto) return texto;
+    return texto.charAt(0).toUpperCase() + texto.slice(1);
+}
+
+eventManager.addEventListener(".verb", "click", (e) => {
+    const index = e.target.dataset.index;
+    const verbo_info = lista_verbos_ordenados[index]
+    mostrar_informacion_modal(verbo_info);
+    abrir_modal();
+});
+
+eventManager.addEventListener("#modalBackdrop", "click", () => {
+    cerrar_modal();
+});
+
+eventManager.addEventListener("#modal_info_verb", "click", (e) => {
+    const { target } = e;
+
+    let elemento = target.closest("#btn_cerrar_x");
+    if (elemento) {
+        cerrar_modal();
+        return
+    }
+});
+
+eventManager.addEventListener('document', 'keydown', (e) => {
+    if (e.key === 'Escape') {
+        cerrar_modal();
+    }
+});
+
 const main = async () => {
     let lista_verbos = await obtener_verbos();
-    lista_verbos = ordenar_verbos(lista_verbos);
+    lista_verbos_ordenados.push(...ordenar_verbos(lista_verbos));
     const [lista1, lista2, lista3] = separar_lista(lista_verbos);
 
     const contenedor1 = document.getElementById('contenedor-lista1');

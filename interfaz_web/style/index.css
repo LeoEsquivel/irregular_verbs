@@ -1,8 +1,8 @@
 @import url('./tooltip.css');
 
 body {
-    background-color: #1A1818;
-    color: #FFF;
+    background-color: #1A1818 !important;
+    color: #FFF !important;
 }
 
 .config {
