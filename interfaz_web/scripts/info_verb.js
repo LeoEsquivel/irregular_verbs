@@ -1,29 +1,34 @@
 import { get_verbs } from './services/http.services.js';
-import { SlotMachine } from './slot_machine.js';
-
 import { eventManager } from '../einaudi/eventdelegationmanager.js';
 
-
 const d = document;
+const verbos = {};
 
-const slot_machine = new SlotMachine();
+const obtener_verbos = async () => {
+    const verbos_response = await get_verbs();
+    return verbos_response.forEach(verbo => {
+        const clave = verbo.infinitive.toLowerCase().replace(/^to\s+/, "");
+        verbos[clave] = verbo;
+    });
+}
 
-eventManager.addEventListener('#btn_get_verb','click', async (e) => {
-
-    if(slot_machine.getSize() == 0) {
-        const verbs_list = await get_verbs();
-        slot_machine.setVerbList(verbs_list);
-    }
-
-    const { infinitive, simple_past, past_participle, 
-            translation, eng_example, esp_example } = slot_machine.getRandomVerb();
+const llenar_info = (verbo_info) => {
+    const { infinitive, simple_past, past_participle, translation, eng_example, esp_example } = verbo_info;
+    
     d.getElementById('infinitive').innerText = infinitive;
     d.getElementById('simple_past').innerText = simple_past;
     d.getElementById('past_participle').innerText = past_participle;
     d.getElementById('tooltip_trans').setAttribute('tooltip', translation);
     create_tr(eng_example, esp_example);
+}
+
+eventManager.addEventListener("#actualizar", "click", () => {
+    const verbo = location.hash.split("#")[1];
+    const info_verbo = verbos[verbo];
+    llenar_info(info_verbo);
 });
 
+// TODO: Refactorizar, mismas funciones en index.js
 const create_tr = (eng_example = '', esp_example = '') => {
     const tbody_example = d.getElementById("tbody_example");
 
@@ -43,3 +48,12 @@ const create_td = (text_value = '') => {
     td.innerText = text_value;
     return td
 }
+
+const main = async () => {
+    const verbo = location.hash.split("#")[1];
+    await obtener_verbos();
+    const info_verbo = verbos[verbo];
+    llenar_info(info_verbo);
+}
+
+main();

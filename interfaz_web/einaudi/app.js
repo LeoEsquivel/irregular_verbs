@@ -66,7 +66,6 @@ export const loadTemplate = async (templatePath, templateId, containerId) => {
  * @param {Object} state - Objeto de estado con pares de ID de elementos y sus valores.
  */
 const applyStateToDOM = (state) => {
-  debugger
   Object.entries(state).forEach(([ id, { type, value } ]) => {
     const element = document.querySelector(id);
     if(type === "childList" && element) {

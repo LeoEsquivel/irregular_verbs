@@ -1,0 +1,142 @@
+<template id="lista_template">
+    <style>
+        .verbos_titulo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .verbos_item>span {
+            color: #FFF;
+            cursor: pointer;
+        }
+
+        .verbos_lista {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .slot_modal {
+            position: relative;
+            border-bottom: 2px solid #fff;
+            text-align: center;
+            line-height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* MODAL */
+        .modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 1040;
+        }
+
+        .custom-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1050;
+            min-width: 90%;
+        }
+
+        .modal-header {
+            background-color: #1A1818 !important;
+            color: #FFF !important;
+        }
+
+        .modal-content {
+            background-color: #262525 !important;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.3s;
+        }
+
+        .btn-close {
+            color: #FFF;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+
+    <article class="container">
+        <div class="row p-0 m-0">
+            <div id="contenedor-lista1" class="col-12 p-3 col-md mt-3 h-100"></div>
+            <div id="contenedor-lista2" class="col-12 p-3 col-md mt-3 h-100"></div>
+            <div id="contenedor-lista3" class="col-12 p-3 col-md mt-3 h-100"></div>
+        </div>
+    </article>
+
+    <article id="modal">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+
+        <div id="modal_info_verb" class="custom-modal modal-xl">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 id="verb" class="modal-title">Información</h5>
+                        <button type="button" class="btn-close" id="btn_cerrar_x"></button>
+                    </div>
+                    <div class="modal-body">
+                        <article class="container">
+                            <div class="row">
+                                <div class="col-12 p-3 col-md mt-4">
+                                    <div class="slot_modal">
+                                        <div class="slot-label">Infinitive
+                                            <span id="tooltip_trans" tooltip="">
+                                                <img src="static/quiestion_circle.svg"></img>
+                                            </span>
+                                        </div>
+                                        <div id="infinitive" class="slot-text" data-text></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 p-3 col-md mt-4">
+                                    <div class="slot_modal">
+                                        <div class="slot-label">Simple Past</div>
+                                        <div id="simple_past" class="slot-text" data-text></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 p-3 col-md mt-4">
+                                    <div class="slot_modal">
+                                        <div class="slot-label">Past Participle</div>
+                                        <div id="past_participle" class="slot-text" data-text></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    
+                        <article class="container mt-4 mx-auto d-block">
+                            <table class="table table_example">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="text-center">English Example</th>
+                                        <th scope="col" class="text-center">Spanish Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody_example">
+                                </tbody>
+                            </table>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <script type="module" src="./scripts/lista.js"></script>
+</template>

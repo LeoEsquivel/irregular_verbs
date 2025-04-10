@@ -6,7 +6,7 @@ export class EventDelegationManager {
         this.cache = new Set();
     
         // Registrar eventos a delegear
-        ['click', 'keyup'].forEach((eventType) => {
+        ['click', 'keyup', 'hashchange'].forEach((eventType) => {
           this.container.addEventListener(eventType, (event) => this.handleEvent(event));
         });
       }
@@ -43,10 +43,9 @@ export class EventDelegationManager {
         const { type, target } = event;
 
         if (!this.eventMap[type]) return;
-
         // Buscar y ejecutar el callback.
         this.eventMap[type].forEach(({ selector, callback }) => {
-            if (selector === 'document') {
+            if (selector === 'document' || selector === 'window') {
                 callback(event);
             } else if (target.closest(selector)) {
                 const matchedElement = target.closest(selector);
