@@ -24,6 +24,20 @@ eventManager.addEventListener('#btn_get_verb','click', async (e) => {
     create_tr(eng_example, esp_example);
 });
 
+eventManager.addEventListener('.slot-text','dblclick', async (e) => {
+    e.preventDefault();
+    const { target } = e;
+    const text = target.innerText;
+    
+    if(text === '') return;
+
+    const message = new SpeechSynthesisUtterance(text);
+    message.rate = 0.80;
+    message.lang = "en-US";
+    speechSynthesis.speak(message);
+});
+
+
 const create_tr = (eng_example = '', esp_example = '') => {
     const tbody_example = d.getElementById("tbody_example");
 

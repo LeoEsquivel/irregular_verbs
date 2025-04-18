@@ -155,6 +155,19 @@ eventManager.addEventListener(".verb", "click", (e) => {
     abrir_modal();
 });
 
+eventManager.addEventListener('.slot-text','dblclick', async (e) => {
+    e.preventDefault();
+    const { target } = e;
+    const text = target.innerText;
+    
+    if(text === '') return;
+
+    const message = new SpeechSynthesisUtterance(text);
+    message.rate = 0.80;
+    message.lang = "en-US";
+    speechSynthesis.speak(message);
+});
+
 eventManager.addEventListener("#modalBackdrop", "click", () => {
     cerrar_modal();
 });

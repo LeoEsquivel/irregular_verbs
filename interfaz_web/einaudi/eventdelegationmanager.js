@@ -6,7 +6,7 @@ export class EventDelegationManager {
         this.cache = new Set();
     
         // Registrar eventos a delegear
-        ['click', 'keyup', 'hashchange'].forEach((eventType) => {
+        ['click', 'dblclick', 'keyup', 'hashchange'].forEach((eventType) => {
           this.container.addEventListener(eventType, (event) => this.handleEvent(event));
         });
       }
